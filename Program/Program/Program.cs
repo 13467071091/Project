@@ -11,11 +11,39 @@ namespace Program
         static void Main(string[] args)
         {
 
-            Fu[] arr = { new Circle(5),new Rect(3,4),new Square(5)};
+            /*Fu[] arr = { new Circle(5),new Rect(3,4),new Square(5)};
             foreach (Fu ele in arr)
             {
                 ele.Jisuan();
+            }*/
+            //GetShape(2).Jisuan();
+
+            int i = 1;
+            Fu fuck = new Rect(1, 2);
+
+            DaYin( GetShape(int.Parse(Console.ReadLine())));
+        }
+
+        public static Fu GetShape(int i)
+        {
+            switch (i)
+            {
+                case 0:
+                    return new Circle(1);
+                case 1:
+                    return new Rect(3, 4);
+                case 2:
+                    return new Square(2);
+                default:
+                    Console.WriteLine("哈马比");
+                    throw new Exception("哈马比");
+                    
             }
+        }
+
+        public static void DaYin(Fu die)
+        {
+            die.Jisuan();
         }
     }
 
